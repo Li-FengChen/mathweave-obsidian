@@ -1,0 +1,17 @@
+{
+  "mathjax": {
+    "version": "3.2.2",
+    "url": "https://registry.npmjs.org/mathjax/-/mathjax-3.2.2.tgz",
+    "sha256": "1b9c0a1c44df864e915690558e72adb9cc5203360daefd385084ced3b6c64c09"
+  },
+  "marked": {
+    "version": "12.0.2",
+    "url": "https://registry.npmjs.org/marked/-/marked-12.0.2.tgz",
+    "sha256": "6cfd2d09c6bce2541558a1547e5f3b9895ed743f0d287536ff2280e318e8a074"
+  },
+  "dompurify": {
+    "version": "3.2.6",
+    "url": "https://registry.npmjs.org/dompurify/-/dompurify-3.2.6.tgz",
+    "sha256": "fe734a97f5938a5ff7f99aedf348c53b8d47c897859fcc57ac4feaa70582c0b6"
+  }
+}

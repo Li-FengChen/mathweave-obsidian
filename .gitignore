@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.qa/
+/build/
+/dist/
+/release/
+*.log
+.env
+.env.*
+*.lnk
+.math_obsidian_agent/
+/output/
+/tmp/
