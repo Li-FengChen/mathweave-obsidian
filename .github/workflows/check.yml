@@ -14,7 +14,6 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 20
     env:
-      MATH_OBSIDIAN_HOME: ${{ runner.temp }}/mathweave-state
       PYTHONUTF8: '1'
     steps:
       - uses: actions/checkout@v4
@@ -30,5 +29,7 @@ jobs:
         run: python -m pip install -r requirements-lock.txt
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
+        env:
+          MATH_OBSIDIAN_HOME: ${{ runner.temp }}/mathweave-state
       - name: Check the desktop application
         run: python tools/qa_gui.py

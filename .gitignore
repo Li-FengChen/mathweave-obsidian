@@ -10,5 +10,6 @@ __pycache__/
 .env.*
 *.lnk
 .math_obsidian_agent/
+/docs/使用说明-v1历史.pdf
 /output/
 /tmp/
