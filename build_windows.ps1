@@ -2,8 +2,8 @@ $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
 $buildPython = Join-Path $PSScriptRoot '.venv\Scripts\python.exe'
 if (-not (Test-Path -LiteralPath $buildPython)) {
-    py -3 -m venv .venv
-    if ($LASTEXITCODE -ne 0) { throw '请先安装 Python 3.10 或更新版本，再运行打包脚本。' }
+    python -m venv .venv
+    if ($LASTEXITCODE -ne 0) { throw '请先安装 Python 3.12，再运行打包脚本。' }
 }
 & $buildPython -m pip install -r requirements-lock.txt
 if ($LASTEXITCODE -ne 0) { throw '构建依赖安装失败。' }

@@ -19,6 +19,7 @@ completed = subprocess.run([str(exe), '--verify-bundle', str(output)], cwd=exe.p
 print('Exit code:', completed.returncode)
 if completed.stderr:
     print(completed.stderr.decode('utf-8', errors='replace')[-3000:])
+completed.check_returncode()
 if output.exists():
     report = json.loads(output.read_text(encoding='utf-8'))
     print(json.dumps(report, ensure_ascii=False))

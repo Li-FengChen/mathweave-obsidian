@@ -38,7 +38,7 @@ def main():
             if not obsolete.resolve().is_relative_to(RELEASE.resolve()):
                 raise ValueError('Unsafe obsolete runtime path')
             obsolete.unlink()
-    for name in ('README.md', 'requirements-lock.txt', 'THIRD_PARTY_NOTICES.md','LICENSE'):
+    for name in ('README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'requirements-lock.txt', 'THIRD_PARTY_NOTICES.md', 'LICENSE'):
         shutil.copy2(ROOT / name, portable / name)
     readme=(portable/'README.md').read_text(encoding='utf-8').replace('(assets/app-icon.png)','(_internal/assets/app-icon.png)')
     (portable/'README.md').write_text(readme,encoding='utf-8')
@@ -69,11 +69,11 @@ def main():
     for path in qt_root.rglob('*'):
         if path.is_file() and path.name.lower() in ('qtwebengine_license', 'qtwebengine_license.txt'):
             shutil.copy2(path, licenses / path.name)
-    binary_zip = RELEASE / f'数学知识织网-{VERSION}-Windows.zip'
+    binary_zip = RELEASE / f'MathWeave-{VERSION}-Windows-x64.zip'
     zip_tree(portable, binary_zip)
-    source_zip = RELEASE / f'数学知识织网-{VERSION}-源码.zip'
+    source_zip = RELEASE / f'MathWeave-{VERSION}-source.zip'
     allowed_dirs = ('core', 'ai', 'ui', 'assets', 'tools', 'tests','.github')
-    allowed_files = ('main.py', 'README.md', 'requirements.txt', 'requirements-build.txt', 'requirements-lock.txt', 'MathWeave.spec', 'build_windows.ps1', '启动数学知识织网.cmd', 'THIRD_PARTY_NOTICES.md','LICENSE','.gitignore')
+    allowed_files = ('main.py', 'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'requirements.txt', 'requirements-build.txt', 'requirements-lock.txt', 'MathWeave.spec', 'build_windows.ps1', '启动数学知识织网.cmd', 'THIRD_PARTY_NOTICES.md', 'LICENSE', '.gitignore')
     with zipfile.ZipFile(source_zip, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for directory in allowed_dirs:
             for path in sorted((ROOT / directory).rglob('*')):

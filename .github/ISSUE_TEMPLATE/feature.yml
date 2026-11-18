@@ -1,0 +1,17 @@
+name: 功能建议
+description: 建议改进数学对话整理或 Obsidian 工作流程
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你希望完成什么？目前遇到了什么困难？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望如何改进
+      description: 可以举一个虚构例子，说明理想的操作或输出。
+    validations:
+      required: true

@@ -1,0 +1,24 @@
+name: 报告问题
+description: 报告程序行为与预期不符的情况
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: 应用和系统版本
+      placeholder: 例如 MathWeave 2.2.1，Windows 11 x64，便携版
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请说明导入、预览、保存或整理等操作；示例请用虚构材料。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期结果和实际结果
+      description: 可附脱敏后的错误信息或截图，请勿包含 API 密钥或私人笔记。
+    validations:
+      required: true

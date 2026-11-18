@@ -21,7 +21,7 @@
 
 Qt / PySide6 共享运行库位于 _internal 中，可以用接口与版本兼容的修改版替换，不被加密绑定到应用。接收者可以为调试修改的 LGPL 组件而进行必要的逆向分析；本项目不施加禁止条款。
 
-应用的完整可编辑源码与构建方式附在“数学知识织网-2.0.0-源码.zip”。Qt 与 PySide6 对应版本的上游源代码可从官方发布渠道取得，本项目没有修改 Qt、PySide6 或 Chromium：
+应用的完整可编辑源码与构建方式附在同版本的 `MathWeave-<版本>-source.zip`。Qt 与 PySide6 对应版本的上游源代码可从官方发布渠道取得，本项目没有修改 Qt、PySide6 或 Chromium：
 
 - [Qt for Python 源代码发布目录](https://download.qt.io/official_releases/QtForPython/)
 - [Qt 6.11 发布目录](https://download.qt.io/official_releases/qt/6.11/)
